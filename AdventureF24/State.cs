@@ -4,14 +4,15 @@ public class State
 {
     public bool IsActive { get; private set; }
 
-    public string StateType;
+    public StateType Type;
     private List<Action> methodsToCallOnActivate = new List<Action>();
     private List<Action> methodsToCallOnDeactivate = new List<Action>();
     
-    public State(string stateType)
+    public State(StateType type)
     {
-        StateType = stateType;
+        Type = type;
         IsActive = false;
+        // if (type == StateType.Exploring) {...}
     }
 
     public void Activate()

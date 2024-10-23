@@ -23,5 +23,7 @@ public static class Game
     {
         Map.Initialize();
         Player.Initialize();
+        States.Initialize();
+        States.ChangeState(StateType.Snoozing);
     }
 }

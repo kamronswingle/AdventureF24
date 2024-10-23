@@ -14,4 +14,11 @@ public static class IO
         Console.Write("> ");
         return Console.ReadLine();
     }
+
+    public static void Error(string error)
+    {
+        Console.ForegroundColor = ConsoleColor.Red;
+        Console.Write("ERROR: " + error + "\n");
+        Console.ResetColor();
+    }
 }
